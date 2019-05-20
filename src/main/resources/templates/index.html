@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Meals on Wheels</title>
+</head>
+<body>
+<p th:text="${namePerson}"></p>
+
+<form action="/register" method="GET">
+    <input type="submit" name="action" value="Register" />
+    <br> <br>
+</form>
+
+<form action="/login" method="GET">
+    <input type="submit" name="action" value="Login" />
+    <br> <br>
+</form>
+
+</body>
+</html>

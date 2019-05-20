@@ -1,0 +1,4 @@
+<ul *ngFor="let category of categories">
+  <li class="list-inline-item"><button class="btn btn-info" (click)="selectCategory(category.idCategorie)">{{ category.name }}</button> </li>
+  <!--<li class="list-inline-item"> <a [routerLink]="[idUser,'/restaurant',category.restaurant.idRestaurant,category.idCategorie]">{{ category.name }}</a></li>-->
+</ul>

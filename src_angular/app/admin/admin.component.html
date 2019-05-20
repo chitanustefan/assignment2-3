@@ -1,0 +1,26 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID comanda</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>{{ order.idOrder }}</td>
+            <td><select [(ngModel)]="order.status">
+                <option value="neconfirmat">neconfirmat</option>
+                <option value="confirmat">confirmat</option>
+                <option value="incurs">In curs de livrare</option>
+                <option value="livrat">livrat</option>
+              </select></td>
+            <button class="btn btn-info" (click)="changeStatus(order)">SELECT</button>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-info" (click)="exportOrders()">EXPORT</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,21 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Pret</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let subcategory of subcats">
+            <td><img [src]="subcategory.image"  width="100" height="100"></td>
+            <td>{{ subcategory.name }}</td>
+            <td>{{ subcategory.price }}</td>
+            <button class="btn btn-info" (click)="placeOrder(subcategory.idSubcategory)">Add to cart</button>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
